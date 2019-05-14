@@ -1,0 +1,40 @@
+* {
+    font-family: "Roboto", "Lato", "Segoe UI", "Myriad Set Pro", "Lucida Grande", "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti, "Noto Serif CJK SC Light", "Source Han Serif CN Light", "Noto Sans CJK SC Light", "Source Han Sans CN Light", "Microsoft YaHei UI", "Microsoft YaHei", Segoe, Arial, sans-serif !important;
+}
+
+body {
+    background-color: #227D51;
+    color: #7a776e;
+}
+
+.content {
+    width: 100%;
+    color: white;
+    position: absolute;
+    top: 19%;
+    left: 0;
+    text-align: center;
+}
+
+.content > h1 {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    padding: 10px;
+    background-color: rgba(256, 256, 256, 0.2);
+}
+
+
+.content > h2 {
+    padding: 4px;
+}
+
+.content > h2:hover {
+    margin-left: 20vw;
+    margin-right: 20vw;
+    background-color: rgba(256, 256, 256, 0.2);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
