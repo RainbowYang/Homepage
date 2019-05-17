@@ -4,7 +4,6 @@
 
 body {
     background-color: #227D51;
-    color: #7a776e;
 }
 
 .content {
@@ -32,9 +31,4 @@ body {
     margin-left: 20vw;
     margin-right: 20vw;
     background-color: rgba(256, 256, 256, 0.2);
-}
-
-a {
-    color: white;
-    text-decoration: none;
 }
