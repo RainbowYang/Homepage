@@ -1,34 +1,71 @@
-* {
-    font-family: "Roboto", "Lato", "Segoe UI", "Myriad Set Pro", "Lucida Grande", "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti, "Noto Serif CJK SC Light", "Source Han Serif CN Light", "Noto Sans CJK SC Light", "Source Han Sans CN Light", "Microsoft YaHei UI", "Microsoft YaHei", Segoe, Arial, sans-serif !important;
-}
-
 body {
-    background-color: #227D51;
+    background-color: #282c35;
+    color: #f0f0f0;
+    padding: 0;
+    margin: 0;
+    font-family: "Source Han Serif CN", serif
 }
 
-.content {
-    width: 100%;
-    color: white;
-    position: absolute;
-    top: 19%;
-    left: 0;
+#info {
+    padding-top: 20vh;
+    height: 80vh;
+    width: 30vw;
+    font-size: 48px;
+    background: rgba(256, 256, 256, 0.2);
     text-align: center;
+    float: left;
 }
 
-.content > h1 {
-    margin-left: 10vw;
-    margin-right: 10vw;
+.links {
+    padding: 30px;
+}
+
+.link {
     padding: 10px;
-    background-color: rgba(256, 256, 256, 0.2);
+    font-size: 36px;
+}
+
+.link:hover {
+    transform: translateX(20px);
+    background: rgba(256, 256, 256, 0.2);
+}
+
+a {
+    color: #f0f0f0;
+    text-decoration: none;
 }
 
 
-.content > h2 {
-    padding: 4px;
-}
+/*.content {*/
+/*    width: 100%;*/
+/*    text-align: center;*/
+/*}*/
 
-.content > h2:hover {
-    margin-left: 20vw;
-    margin-right: 20vw;
-    background-color: rgba(256, 256, 256, 0.2);
-}
+/*.title {*/
+/*    float: left;*/
+/*    !*height: 100%;*!*/
+/*    background-color: rgba(256, 256, 256, 0.2);*/
+/*}*/
+
+/*.title > h1 {*/
+/*    margin: 0;*/
+/*    padding: 12vh;*/
+/*}*/
+
+/*.links {*/
+/*    width: 100%;*/
+/*    position: absolute;*/
+/*    top: 30vh;*/
+/*}*/
+
+
+/*.links > h2 {*/
+/*    padding: 6px;*/
+/*}*/
+
+/*.links > h2:hover {*/
+/*    margin-left: 20vw;*/
+/*    margin-right: 20vw;*/
+/*    background-color: rgba(256, 256, 256, 0.2);*/
+/*    color: hotpink;*/
+/*}*/
