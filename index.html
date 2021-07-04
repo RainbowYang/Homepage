@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="theme-color" content="#090822">
@@ -8,7 +7,11 @@
   <title>Rainbow Yang's Page</title>
 
   <link rel="stylesheet" href="index.css">
-  <script src="https://kit.fontawesome.com/2772e94838.js" crossorigin="anonymous"></script>
+
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.css" rel="stylesheet">
+  <script src="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/js/all.js"></script>
+
+  <script src="https://unpkg.com/vue@next"></script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-93934873-3"></script>
@@ -22,39 +25,57 @@
     gtag('config', 'UA-93934873-3')
   </script>
 </head>
-
 <body>
-<div class="color"></div>
+<div class="color-bar"></div>
 <div class="main">
-  <div class="content">
-    <div class="name">
-      Rainbow Yang
-    </div>
+  <div id="content">
+    <div class="name"> {{ name }}</div>
 
-    <div class="label">
-      <h2>Main</h2>
-    </div>
-    <div class="links">
-      <a href="https://blog.rainbowyang.moe" title="个人博客">
-        <button><i class="fa fa-home"></i></button>
-      </a>
-      <a href="https://github.com/RainbowYang" title="Github主页" target="_blank">
-        <button><i class="fa fa-github"></i></button>
-      </a>
-      <a href="mailto:q1041410345@gmail.com" title="发邮件给我">
-        <button><i class="fa fa-at"></i></button>
-      </a>
-    </div>
-
-    <div class="label">
-      <h2>Others</h2>
-    </div>
-    <div class="links">
-      <a href="https://memo.rainbowyang.moe/" title="进度管理系统">
-        <button><i class="fas fa-landmark"></i></button>
-      </a>
-    </div>
+    <template v-for="(links, label) in allLinks">
+      <div class="label">
+        <h2>{{ label }}</h2>
+      </div>
+      <div class="links">
+        <a v-for="link in links" :href="link.href" :title="link.title" target="_blank">
+          <button><i :class="link.icon"></i></button>
+        </a>
+      </div>
+    </template>
   </div>
 </div>
+<script>
+  Vue.createApp({
+    data () {
+      return {
+        name: 'Rainbow Yang',
+        allLinks: {
+          Main: [
+            {
+              title: '个人博客',
+              href: 'https://blog.rainbowyang.moe',
+              icon: 'fas fa-home',
+            },
+            {
+              title: 'Github主页',
+              href: 'https://github.com/RainbowYang',
+              icon: 'fab fa-github',
+            },
+            {
+              title: '发邮件给我',
+              href: 'mailto:q1041410345@gmail.com',
+              icon: 'fas fa-at',
+            },
+          ],
+          Others: [
+            {
+              title: '进度管理系统',
+              href: 'https://memo.rainbowyang.moe/',
+              icon: 'fas fa-landmark',
+            }],
+        },
+      }
+    },
+  }).mount('#content')
+</script>
 </body>
 </html>
